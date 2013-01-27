@@ -1,0 +1,13 @@
+Interogari utile
+
+- pentru aflarea Afectiunilor pe care le trateaza o planta
+areSimptoma some (esteTratataDe value Menta)
+
+- pentru aflarea Simpomelor pe care le trateaza o planta
+esteTratataDe value Menta
+
+- pentru aflarea platelor ce trateaza o afectiune data
+trateaza some (esteSimptomaPentru value Hepatita_A)
+
+- pentru aflarea plantei ce are denumirea populara "sir_caractere"
+denumirePopulara value "sir_caractere"^^string 
