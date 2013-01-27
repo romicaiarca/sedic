@@ -5,9 +5,9 @@
     <title><?php echo !empty($title) ? $title : 'sedic' ?></title>
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <link href="<?php echo css_path('layout/style.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo css_path('layout/style.css') ?>" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="<?php echo css_path('layout/coda-slider.css') ?>" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="<?php echo css_path('layout/coda-slider.css') ?>" type="text/css" media="screen">
 
     <script src="<?php echo js_path('layout/jquery-1.2.6.js') ?>" type="text/javascript"></script>
     <script src="<?php echo js_path('layout/jquery.scrollTo-1.3.3.js') ?>" type="text/javascript"></script>

@@ -325,7 +325,11 @@ em
 #contact_form form textarea
 { 
     width: 310px; 
-    height: 100px; 
+    max-width: 310px;
+    min-width: 310px;
+    height: 100px;
+    max-height: 100px;
+    min-height: 100px;
     padding: 5px; 
     background: #000; 
     border: 1px solid #36322e; 
@@ -376,4 +380,9 @@ em
     background: #1b2c35;
     border: 1px solid #0b1418;
     margin: 3px 30px 0 0;
+}
+
+#content .scroll .scrollContainer .justify
+{
+    text-align: justify;
 }

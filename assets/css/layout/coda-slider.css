@@ -68,7 +68,7 @@
 }
 
 .scroll {
-    height: 360px;
+    height: 370px;
     width: 700px;
     overflow: auto;
     overflow-x: hidden;
@@ -77,7 +77,7 @@
 }
 
 .scrollContainer div.panel {
-    height: 360px;
+    height: 370px;
     width: 700px;
     padding: 0;
     overflow: hidden;

@@ -77,7 +77,7 @@
                         quis tincidunt metus.
                     </em>
                 </p>
-                <p align="justify">
+                <p class="justify">
                     Vestibulum vitae lectus a leo commodo egestas. Sed et ligula mauris.
                     Donec interdum iaculis eros, sed porttitor justo ornare ac. Suspendisse
                     ultrices arcu auctor sapien malesuada dictum. <a href="#">Vivamus non</a>
@@ -88,7 +88,7 @@
                     fermentum, ante eget sodales lacinia, nisl diam semper elit, non hendrerit
                     nunc urna vitae erat. Etiam vel nisi risus.
                 </p>
-                <p align="justify">
+                <p class="justify">
                     Duis nulla diam, posuere ac, varius id, ullamcorper sit amet, libero.
                     Nam sodales, pede vel dapibus lobortis, ipsum diam molestie risus, a
                     vulputate risus nisl pulvinar lacus. Vestibulum tempus porttitor ipsum,
@@ -107,12 +107,12 @@
                         <em>Nam at arcu libero, ut venenatis elit. Nulla eget risus turpis,
                             non aliquet dui ultricies elementum convallis non. </em>
                     </p>
-                    <p align="justify">
+                    <p class="justify">
                         Sed eu libero quis neque laoreet cursus. Fusce elit metus, elementum nec consequat a,
                         interdum vitae est. Aliquam sit amet odio vitae dui blandit elementum. Ut eu dolor nunc.
                         Nam in nunc sed mi adipiscing lacinia suscipit eget tortor.
                     </p>
-                    <p align="justify">
+                    <p class="justify">
                         Praesent at erat a magna ultricies bibendum. Sed sagittis mollis nulla non interdum.
                         Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris risus, ornare eget
@@ -246,7 +246,7 @@
                             <div class="cleaner_h10"></div>
 
                             <label for="text">Message:</label>
-                            <textarea id="text" name="text" rows="0" cols="0" class="required"></textarea>
+                            <textarea id="text" name="text" class="required"></textarea>
 
                             <div class="cleaner_h10"></div>
 
