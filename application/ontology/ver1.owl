@@ -508,15 +508,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -579,14 +579,14 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
