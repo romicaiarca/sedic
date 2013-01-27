@@ -127,7 +127,6 @@
     <owl:DatatypeProperty rdf:about="&untitled-ontology-14;denumirePopulara">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:domain rdf:resource="&untitled-ontology-14;Plante"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -177,6 +176,14 @@
     <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Astm -->
 
     <owl:Class rdf:about="&untitled-ontology-14;Astm">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-14;Afectiune"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Cardiopatie -->
+
+    <owl:Class rdf:about="&untitled-ontology-14;Cardiopatie">
         <rdfs:subClassOf rdf:resource="&untitled-ontology-14;Afectiune"/>
     </owl:Class>
     
@@ -307,12 +314,78 @@ Fructele
     
 
 
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Anxietate -->
+
+    <owl:Thing rdf:about="&untitled-ontology-14;Anxietate">
+        <rdf:type rdf:resource="&untitled-ontology-14;Afectiune"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Coacaz"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Aritmii_cardiace -->
+
+    <owl:Thing rdf:about="&untitled-ontology-14;Aritmii_cardiace">
+        <rdf:type rdf:resource="&untitled-ontology-14;Simptoma"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <esteSimptomaPentru rdf:resource="&untitled-ontology-14;Cardiopatie_ischemică"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Coacaz"/>
+    </owl:Thing>
+    
+
+
     <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Astm_bronsic -->
 
     <owl:Thing rdf:about="&untitled-ontology-14;Astm_bronsic">
         <rdf:type rdf:resource="&untitled-ontology-14;Astm"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <areSimptoma rdf:resource="&untitled-ontology-14;Respiratie_ingreunata"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Cardiopatie_ischemică -->
+
+    <owl:Thing rdf:about="&untitled-ontology-14;Cardiopatie_ischemică">
+        <rdf:type rdf:resource="&untitled-ontology-14;Cardiopatie"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <areSimptoma rdf:resource="&untitled-ontology-14;Aritmii_cardiace"/>
+        <areSimptoma rdf:resource="&untitled-ontology-14;Infarct_miocardic"/>
+        <areSimptoma rdf:resource="&untitled-ontology-14;angina_pectorala"/>
+        <areSimptoma rdf:resource="&untitled-ontology-14;insuficienta_cardiaca"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Coacaz -->
+
+    <owl:Thing rdf:about="&untitled-ontology-14;Coacaz">
+        <rdf:type rdf:resource="&untitled-ontology-14;Plante"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <modPreparare rdf:datatype="&xsd;string">-  ceai de agris – se face din o linguriţă de pulbere de rădăcină de agris care se va pune la 250 ml apă care fierbe. Se lasa acoperit pentru 15 minute si ulterior se strecoară. Se indică la astm, insomnii. În cazul insomniei se va lua cu 2 ore înainte de culcare.
+
+-  1 vârf de cuţit de praf de agris se va tine sublingual pentru 10 minute, si apoi se înghite cu puţină apă. Se poate lua de 3 ori pe zi în tratarea diferitelor afectiuni
+
+- 1 linguriţă de agris mărunţit se va pune la 250 ml apă. Se lasa acoperit de seara până dimineaţa când se va consuma după ce va fi strecurat. Este foarte util in dismenoree
+
+- 50 de radacina uscata de agris se macina si se lasa la macerat 15 zile cu 250 ml alcool de 70˚ alimentar. În toata  această perioadă se va agita zilnic. După 15 zile se strecoara. Se poate lua de la 5 picături o dată până la o linguriţă de 3 ori pe zi, diluate cu apă. Este cea mai uşor de administrat metodă pentru că planta are un miros care este foarte greu de suportat.
+
+- se foloseşte la foarte multe ceaiuri combinate.
+
+-  se pot consuma fructe proaspete la fiecare masa. Cei care isi doresc să slăbească sau sa faca o detoxifiere a organismului, vor putea face o cură de fructe: într-o zi se vor manca doar fructe de agris fără nimic altceva. Este foaret bine ca apoi sa se consume la masă împreună cu alte alimente in cantitati moderate. Este un mijloc rapid si eficient de refacere a organismului.
+
+- fructele de agris se pot consuma sub formă de suc.</modPreparare>
+        <denumirePopulara rdf:datatype="&xsd;string">coacăz</denumirePopulara>
+        <urlImagine rdf:datatype="&xsd;string">http://plantelemedicinale.info/wp-content/uploads/2012/03/agris-Ribes-grossularia.jpg</urlImagine>
+        <denumireStiintifica rdf:datatype="&xsd;string">ribes uva crispa, fam. saxifragaceae
+</denumireStiintifica>
+        <trateaza rdf:resource="&untitled-ontology-14;Anxietate"/>
+        <trateaza rdf:resource="&untitled-ontology-14;Aritmii_cardiace"/>
+        <trateaza rdf:resource="&untitled-ontology-14;Infarct_miocardic"/>
+        <trateaza rdf:resource="&untitled-ontology-14;Respiratie_ingreunata"/>
+        <trateaza rdf:resource="&untitled-ontology-14;angina_pectorala"/>
+        <trateaza rdf:resource="&untitled-ontology-14;insuficienta_cardiaca"/>
     </owl:Thing>
     
 
@@ -421,6 +494,17 @@ Fructele
     
 
 
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Infarct_miocardic -->
+
+    <owl:Thing rdf:about="&untitled-ontology-14;Infarct_miocardic">
+        <rdf:type rdf:resource="&untitled-ontology-14;Simptoma"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <esteSimptomaPentru rdf:resource="&untitled-ontology-14;Cardiopatie_ischemică"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Coacaz"/>
+    </owl:Thing>
+    
+
+
     <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Inflamatia_intestinului_gros -->
 
     <owl:Thing rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros">
@@ -496,6 +580,7 @@ Extern
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <esteTratataDe rdf:resource="&untitled-ontology-14;Aglica"/>
         <esteSimptomaPentru rdf:resource="&untitled-ontology-14;Astm_bronsic"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Coacaz"/>
     </owl:Thing>
     
 
@@ -541,6 +626,28 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     
 
 
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#angina_pectorala -->
+
+    <owl:Thing rdf:about="&untitled-ontology-14;angina_pectorala">
+        <rdf:type rdf:resource="&untitled-ontology-14;Simptoma"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <esteSimptomaPentru rdf:resource="&untitled-ontology-14;Cardiopatie_ischemică"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Coacaz"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#insuficienta_cardiaca -->
+
+    <owl:Thing rdf:about="&untitled-ontology-14;insuficienta_cardiaca">
+        <rdf:type rdf:resource="&untitled-ontology-14;Simptoma"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <esteSimptomaPentru rdf:resource="&untitled-ontology-14;Cardiopatie_ischemică"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Coacaz"/>
+    </owl:Thing>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -552,6 +659,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Telina"/>
         </owl:distinctMembers>
@@ -559,120 +673,141 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Tei"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Tei"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Tei"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;insuficienta_cardiaca"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Hepatita_C"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;angina_pectorala"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;insuficienta_cardiaca"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_musculara"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_musculara"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Tei"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Astm_bronsic"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_fermentatie"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemică"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Tei"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemică"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Diaree"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_musculara"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Coacaz"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Tei"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Hepatita_A"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Tei"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;angina_pectorala"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;angina_pectorala"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -686,14 +821,21 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Coacaz"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_musculara"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;angina_pectorala"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -706,8 +848,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Otita"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -720,8 +869,330 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Tei"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;angina_pectorala"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;angina_pectorala"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_musculara"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;insuficienta_cardiaca"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;insuficienta_cardiaca"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Astm_bronsic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Diaree"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Telina"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Coacaz"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;insuficienta_cardiaca"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemică"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Hepatita_B"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;angina_pectorala"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Tei"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Tei"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Coacaz"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Telina"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;angina_pectorala"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Coacaz"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Coacaz"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_musculara"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;insuficienta_cardiaca"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_musculara"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;insuficienta_cardiaca"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemică"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Hepatita_C"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;insuficienta_cardiaca"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;insuficienta_cardiaca"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemică"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Otita"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Astm_bronsic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_fermentatie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Diaree"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_musculara"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Coacaz"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemică"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_fermentatie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;angina_pectorala"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_musculara"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -762,22 +1233,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -790,6 +1254,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemică"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Hepatita_A"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
         </owl:distinctMembers>
@@ -804,8 +1275,8 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemică"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_putefractie"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -818,22 +1289,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Astm_bronsic"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Diaree"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;insuficienta_cardiaca"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Telina"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Hepatita_B"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -841,6 +1305,20 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemică"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
