@@ -1,9 +1,9 @@
 SetEnv DEVELOP_BOX "romica"
-# If your default controller is something other than
-# "welcome" you should probably change this
-RewriteRule ^(index(\.php)?)/?$ / [L,R=301]
-RewriteRule ^(.*)/index/?$ $1 [L,R=301]
- 
-# Removes trailing slashes (prevents SEO duplicate content issues)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ $1 [L,R=301]
+
+# Rewrite rules
+RewriteEngine On
+RewriteBase /
+RewriteCond $1 ^(index\.php|robots\.txt|favicon\.ico|assets)
+RewriteCond %{REQUEST_FILENAME} -d
+
+RewriteRule ^(.*)$ /index.php/$1 [NC,L]
