@@ -177,11 +177,13 @@
 
     <owl:Class rdf:about="&untitled-ontology-14;Astm">
         <rdfs:subClassOf rdf:resource="&untitled-ontology-14;Afectiune"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Bronsita"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Cardiopatie"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Eczeme"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Enterocolita"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Hepatita"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Otita"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Rani"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Viroza"/>
     </owl:Class>
     
@@ -191,6 +193,11 @@
 
     <owl:Class rdf:about="&untitled-ontology-14;Bronsita">
         <rdfs:subClassOf rdf:resource="&untitled-ontology-14;Afectiune"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Cardiopatie"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Eczeme"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Enterocolita"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Rani"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Viroza"/>
     </owl:Class>
     
 
@@ -203,6 +210,7 @@
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Enterocolita"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Hepatita"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Otita"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Rani"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Viroza"/>
     </owl:Class>
     
@@ -215,6 +223,7 @@
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Enterocolita"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Hepatita"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Otita"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Rani"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Viroza"/>
     </owl:Class>
     
@@ -226,6 +235,7 @@
         <rdfs:subClassOf rdf:resource="&untitled-ontology-14;Afectiune"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Hepatita"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Otita"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Rani"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Viroza"/>
     </owl:Class>
     
@@ -236,6 +246,7 @@
     <owl:Class rdf:about="&untitled-ontology-14;Hepatita">
         <rdfs:subClassOf rdf:resource="&untitled-ontology-14;Afectiune"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Otita"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Rani"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Viroza"/>
     </owl:Class>
     
@@ -245,6 +256,7 @@
 
     <owl:Class rdf:about="&untitled-ontology-14;Otita">
         <rdfs:subClassOf rdf:resource="&untitled-ontology-14;Afectiune"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Rani"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Viroza"/>
     </owl:Class>
     
@@ -256,6 +268,15 @@
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="&untitled-ontology-14;Simptoma"/>
         <rdfs:comment>Specifica numele unei plante</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Rani -->
+
+    <owl:Class rdf:about="&untitled-ontology-14;Rani">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-14;Afectiune"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-14;Viroza"/>
     </owl:Class>
     
 
@@ -384,6 +405,58 @@ Ihtioză: ceaiul de albastrele se amesteca cu putina faina si se pun compresii t
     
 
 
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Aloe_vera -->
+
+    <owl:Thing rdf:about="&untitled-ontology-14;Aloe_vera">
+        <rdf:type rdf:resource="&untitled-ontology-14;Plante"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <modPreparare rdf:datatype="&xsd;string">- un vârf de cuţit de praf de aloe vera se va pune sub limbă pentru 10 minute, după care se înghite cu puţină apă. Este foarte amar şi din această cauză se ia foarte greu.
+
+- se pune în capsule de medicamente câte 0,5 g la capsulă şi se iau intern de 3 ori pe zi înainte de mese.
+
+- se va face ceai din 1 linguriţă de praf pus la 250 ml apă clocotită. Se acopera pentru 10 minute după care se filtrează şi se consumă, preferabil îndulcit cu miere, dacă nu est vorba şi despre diabet
+
+- praf se presară pe răni externe
+
+- praf în amestec cu ulei, grăsime diferită (unt, smântână, untură de porc, lanolină, vaselină) transformându-se în creme sau unguente care se vor aplica extern. Se pune 1 parte plantă praf şi 3 părţi grăsime.
+
+- tinctura – se va pune 50 g de praf la 250 ml alcool alimentar de 70°. Se ţine timp de 15 zile agitând des sticla. Se filtrează şi se pune in sticluţe de capacitate mai mică la rece. Se va lua câte 10 picături 1 linguriţă de 3 ori pe zi. Se poate face tinctură şi din plantă proaspătă tot în acest fel.
+
+- plantă proaspătă se taie şi se pune cu tăietura pe rană.
+
+- plantele de aloe se ţin fără apă şi la întuneric o perioadă de 5 zile. Se vor folosi doar plantele care sunt trecute de 3 ani ca vârstă de vegetaţie. După această perioadă se vor tăia frunzele. Există mai multe procedee:
+
+- se pun la uscat pentru obţinerea prafului din toată planta tăiată felii subţiri.
+
+- se extrage sucul care se pune la uscat formându-se praful.
+
+- planta proaspătă se va folosi doar la aplicaţii externe. Se taie în felii punându-se partea tăiată pe rană sau pe piele.
+
+Aloe ca purgativ: 1 linguriţă de tinctură luată cu 100 l apă sau ceai. Se ia după mese. Acţiunea se manifestă după 8-12 ore, rar după 24 ore, prin mărirea peristaltismului intestinal ca urmare a iritaţiei nervoase determinate local în pereţii intestinali.
+
+- mai acţionează şi ca purgativ, tonic amar (anorexie), eupeptic dar şi ca un bun antitoxic în special pentru ficat.
+
+- un vârf de cuţit de praf se va pune sub limbă pentru 10 minute, după care se înghite cu puţină apă. Este foarte amar şi din această cauză se ia foarte greu.
+
+- se pune în capsule de medicamente câte 0,5 g la capsulă şi se iau intern de 3 ori pe zi înainte de mese.
+
+- se va face ceai din 1 linguriţă de praf pus la 250 ml apă clocotită. Se acopera pentru 10 minute după care se filtrează şi se consumă, preferabil îndulcit cu miere, dacă nu est vorba şi despre diabet.
+
+- praf se presară pe răni externe.
+
+- praf în amestec cu ulei, grăsime diferită (unt, smântână, untură de porc, lanolină, vaselină) transformându-se în creme sau unguente care se vor aplica extern. Se pune 1 parte plantă praf şi 3 părţi grăsime.
+
+Tinctură de aloe vera - se va pune 50 g de praf la 250 ml alcool alimentar de 70°. Se ţine timp de 15 zile agitând des sticla. Se filtrează şi se pune in sticluţe de capacitate mai mică la rece. Se va lua câte 10 picături-1 linguriţă de 3 ori pe zi. Se poate face tinctură şi din plantă proaspătă tot în acest fel.
+
+- plantă proaspătă se taie şi se pune cu tăietura pe rană.0</modPreparare>
+        <denumireStiintifica rdf:datatype="&xsd;string">Aloe Ferox, Aloe Perryi, Aloe Vulgaris, Aloe Barbadensis</denumireStiintifica>
+        <denumirePopulara rdf:datatype="&xsd;string">aloe vera</denumirePopulara>
+        <urlImagine rdf:datatype="&xsd;string">http://plantelemedicinale.info/wp-content/uploads/2012/03/Aloe-Vera.jpg</urlImagine>
+        <trateaza rdf:resource="&untitled-ontology-14;Iritatie_oculara"/>
+    </owl:Thing>
+    
+
+
     <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Angina_pectorala -->
 
     <owl:Thing rdf:about="&untitled-ontology-14;Angina_pectorala">
@@ -422,6 +495,16 @@ Ihtioză: ceaiul de albastrele se amesteca cu putina faina si se pun compresii t
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <esteSimptomaPentru rdf:resource="&untitled-ontology-14;Cardiopatie_ischemica"/>
         <esteTratataDe rdf:resource="&untitled-ontology-14;Coacaz"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Arsuri -->
+
+    <owl:Thing rdf:about="&untitled-ontology-14;Arsuri">
+        <rdf:type rdf:resource="&untitled-ontology-14;Rani"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Aloe_vera"/>
     </owl:Thing>
     
 
@@ -523,6 +606,7 @@ Ihtioză: ceaiul de albastrele se amesteca cu putina faina si se pun compresii t
         <rdf:type rdf:resource="&untitled-ontology-14;Afectiune"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <esteTratataDe rdf:resource="&untitled-ontology-14;Albastrele"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Aloe_vera"/>
     </owl:Thing>
     
 
@@ -665,6 +749,7 @@ Ihtioză: ceaiul de albastrele se amesteca cu putina faina si se pun compresii t
     <owl:Thing rdf:about="&untitled-ontology-14;Hiperexcitabilitate_nervoasa">
         <rdf:type rdf:resource="&untitled-ontology-14;Simptoma"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Aloe_vera"/>
         <esteTratataDe rdf:resource="&untitled-ontology-14;Coacaz"/>
     </owl:Thing>
     
@@ -782,12 +867,23 @@ Extern
     
 
 
+    <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Rani_externe -->
+
+    <owl:Thing rdf:about="&untitled-ontology-14;Rani_externe">
+        <rdf:type rdf:resource="&untitled-ontology-14;Rani"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Aloe_vera"/>
+    </owl:Thing>
+    
+
+
     <!-- http://www.semanticweb.org/romicaiarca/ontologies/2013/0/untitled-ontology-14#Respiratie_ingreunata -->
 
     <owl:Thing rdf:about="&untitled-ontology-14;Respiratie_ingreunata">
         <rdf:type rdf:resource="&untitled-ontology-14;Simptoma"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <esteTratataDe rdf:resource="&untitled-ontology-14;Aglica"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Aloe_vera"/>
         <esteSimptomaPentru rdf:resource="&untitled-ontology-14;Astm_bronsic"/>
         <esteTratataDe rdf:resource="&untitled-ontology-14;Coacaz"/>
     </owl:Thing>
@@ -839,6 +935,7 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <rdf:type rdf:resource="&untitled-ontology-14;Simptoma"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <esteTratataDe rdf:resource="&untitled-ontology-14;Albastrele"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Aloe_vera"/>
     </owl:Thing>
     
 
@@ -849,6 +946,7 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <rdf:type rdf:resource="&untitled-ontology-14;Simptoma"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <esteTratataDe rdf:resource="&untitled-ontology-14;Albastrele"/>
+        <esteTratataDe rdf:resource="&untitled-ontology-14;Aloe_vera"/>
     </owl:Thing>
     
 
@@ -902,8 +1000,22 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Anorexia"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_cronica"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Otita"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_fermentatie"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -944,8 +1056,8 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Voma"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_fermentatie"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Hemoroizi"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -958,8 +1070,8 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_fermentatie"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Hemoroizi"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Voma"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -979,15 +1091,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_cronica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemica"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_cronica"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1000,15 +1112,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Voma"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_urechi"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Voma"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1028,15 +1140,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Constipatie"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Raceala"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Constipatie"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Raceala"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1063,6 +1175,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Conjunctivita"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
         </owl:distinctMembers>
@@ -1072,6 +1191,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_acuta"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Furunculoza_pleoapelor"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemica"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1147,15 +1273,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Angina_pectorala"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Insuficienta_cardiaca"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Astm_bronsic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Constipatie"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Astm_bronsic"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Constipatie"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Angina_pectorala"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Insuficienta_cardiaca"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1198,6 +1324,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Anorexia"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_acuta"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aloe_vera"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Telina"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1357,6 +1490,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Hemoroizi"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemica"/>
         </owl:distinctMembers>
@@ -1434,6 +1574,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_putrefactie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Crampe_menstruale"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
         </owl:distinctMembers>
@@ -1441,8 +1588,8 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_putrefactie"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Aloe_vera"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Tei"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1553,6 +1700,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Eczeme_pruriginoase"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Hiperexcitabilitate_nervoasa"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
         </owl:distinctMembers>
@@ -1560,8 +1714,22 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_acuta"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Insuficienta_cardiaca"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Eczeme_pruriginoase"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1581,15 +1749,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Coacaz"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_putrefactie"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Insuficienta_cardiaca"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Iritatie_oculara"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Coacaz"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1602,8 +1770,22 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Insuficienta_cardiaca"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Iritatie_oculara"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Conjunctivita"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_fermentatie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aloe_vera"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1644,6 +1826,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Anorexia"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Conjunctivita"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_putrefactie"/>
         </owl:distinctMembers>
@@ -1651,8 +1840,22 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Constipatie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Hiperexcitabilitate_nervoasa"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Tuse_cu_expectoratie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Conjunctivita"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1674,6 +1877,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Voma"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aglica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Aloe_vera"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1826,6 +2036,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Febra"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
         </owl:distinctMembers>
@@ -1842,6 +2059,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Anorexia"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_putrefactie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_cronica"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1877,6 +2101,20 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Aloe_vera"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Furunculoza_pleoapelor"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -1966,15 +2204,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Crampe_menstruale"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Dureri_musculare"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_acuta"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemica"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_acuta"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Crampe_menstruale"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Dureri_musculare"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2022,8 +2260,22 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Hemoroizi"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Dureri_musculare"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Tuse_cu_expectoratie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2050,15 +2302,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Constipatie"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Hemoroizi"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Hiperexcitabilitate_nervoasa"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Hiperexcitabilitate_nervoasa"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Constipatie"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Hemoroizi"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2085,6 +2337,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Diaree"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemica"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_fermentatie"/>
         </owl:distinctMembers>
@@ -2099,13 +2358,6 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Iritatie_oculara"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_cronica"/>
         </owl:distinctMembers>
@@ -2113,8 +2365,22 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Iritatie_oculara"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_gros"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Raceala"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2164,6 +2430,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Dureri_musculare"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_cronica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2276,6 +2549,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_de_cap"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Hiperexcitabilitate_nervoasa"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aloe_vera"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Coacaz"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2428,8 +2708,8 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Febra"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2437,6 +2717,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_putrefactie"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Furunculoza_pleoapelor"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Febra"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2450,6 +2737,20 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_acuta"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_fermentatie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Constipatie"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_fermentatie"/>
         </owl:distinctMembers>
     </rdf:Description>
@@ -2477,15 +2778,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Iritatie_oculara"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Anorexia"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Conjunctivita"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Anorexia"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Conjunctivita"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Iritatie_oculara"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2556,6 +2857,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Cardiopatie_ischemica"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Constipatie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Furunculoza_pleoapelor"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2589,8 +2897,22 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aloe_vera"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Afin"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Eczeme_zemuinde"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2617,8 +2939,22 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Enterocolita_de_putrefactie"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Infarct_miocardic"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Astm_bronsic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2645,15 +2981,15 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Angina_pectorala"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Hiperexcitabilitate_nervoasa"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Astm_bronsic"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_cronica"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&untitled-ontology-14;Astm_bronsic"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_cronica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Angina_pectorala"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Hiperexcitabilitate_nervoasa"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2710,6 +3046,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Hiperexcitabilitate_nervoasa"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Insuficienta_cardiaca"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Eczeme_zemuinde"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2806,8 +3149,22 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Aloe_vera"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Secarica"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Albastrele"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_acuta"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2827,6 +3184,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Diaree"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Inflamatia_intestinului_subtire"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
         </owl:distinctMembers>
@@ -2835,14 +3199,14 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_acuta"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_cronica"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Diaree"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_acuta"/>
-            <rdf:Description rdf:about="&untitled-ontology-14;Diaree"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Bronsita_cronica"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
@@ -2883,6 +3247,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Albastrele"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Aloe_vera"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Menta"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Musetel"/>
         </owl:distinctMembers>
@@ -2967,6 +3338,13 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Otita"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Dureri_musculare"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Respiratie_ingreunata"/>
         </owl:distinctMembers>
@@ -2983,6 +3361,20 @@ infuzie de ceai de tei din 500 g de produs uscat la 3 l de apa clocotita; dupa s
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="&untitled-ontology-14;Aritmii_cardiace"/>
             <rdf:Description rdf:about="&untitled-ontology-14;Durere_abdominala"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Arsuri"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Astm_bronsic"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-14;Anxietate"/>
+            <rdf:Description rdf:about="&untitled-ontology-14;Rani_externe"/>
         </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
