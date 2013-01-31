@@ -1,9 +1,13 @@
 SetEnv DEVELOP_BOX "romica"
 
-# Rewrite rules
+#Rewrite rules
 RewriteEngine On
-RewriteBase /
-RewriteCond $1 ^(index\.php|robots\.txt|favicon\.ico|assets)
-RewriteCond %{REQUEST_FILENAME} -d
+#RewriteBase /
+#RewriteCond $1 !^(index\.php|robots\.txt|assets|ontology)
+#RewriteRule ^(homepage(/index)?|index(\.php)?)/?$ / [L,R=301]
+RewriteCond $1 !^(index\.php|robots\.txt|assets|cache|themes|uploads)
+RewriteRule ^(.*)$ index.php/$1 [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^(.*)$ /index.php/$1 [NC,L]
+#RewriteRule ^(.*)$ index.php/$1 [L]

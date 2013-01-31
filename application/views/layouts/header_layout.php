@@ -5,17 +5,11 @@
     <title><?php echo !empty($title) ? $title : 'sedic' ?></title>
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <link href="<?php echo css_path('layout/style.css') ?>" rel="stylesheet" type="text/css">
-
-    <link rel="stylesheet" href="<?php echo css_path('layout/coda-slider.css') ?>" type="text/css" media="screen">
-
-    <script src="<?php echo js_path('layout/jquery-1.2.6.js') ?>" type="text/javascript"></script>
-    <script src="<?php echo js_path('layout/jquery.scrollTo-1.3.3.js') ?>" type="text/javascript"></script>
-    <script src="<?php echo js_path('layout/jquery.localscroll-1.2.5.js') ?>" type="text/javascript" charset="utf-8"></script>
-    <script src="<?php echo js_path('layout/jquery.serialScroll-1.2.1.js') ?>" type="text/javascript" charset="utf-8"></script>
-    <script src="<?php echo js_path('layout/coda-slider.js') ?>" type="text/javascript" charset="utf-8"></script>
-    <script src="<?php echo js_path('layout/jquery.easing.1.3.js'); ?>" type="text/javascript" charset="utf-8"></script>
+    <link href="<?php echo css_path('style_base.css') ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo css_path('libs/jquery-ui/jquery-ui-1.10.0.custom.min.css') ?>" rel="stylesheet" type="text/css">
+    <script src="<?php echo js_path('libs/jquery-1.9.0.min.js') ?>" type="text/javascript"></script>
+    <script src="<?php echo js_path('libs/jquery-ui-1.10.0.custom.min.js') ?>" type="text/javascript"></script>
+    <script src="<?php echo js_path('libs/jquery.jscrollpane.min.js') ?>" type="text/javascript"></script>
+    <script src="<?php echo js_path('scripts.js') ?>" type="text/javascript"></script>
 </head>
 <body>
-<div id="slider">
-    <div id="wrapper">

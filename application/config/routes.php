@@ -38,7 +38,13 @@
 |
 */
 
-$route['default_controller'] = "index";
+$route['default_controller'] = "homepage/index";
+$route['get-plants'] = 'homepage/ax_plants';
+$route['get-disease'] = 'homepage/ax_disease';
+$route['search'] = 'homepage/search';
+$route['get-details'] = 'homepage/get_details';
+$route['about'] = 'homepage/about';
+$route['contact'] = 'homepage/contact';
 $route['404_override'] = '';
 
 

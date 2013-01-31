@@ -1,13 +1,91 @@
 Interogari utile
 
-- pentru aflarea Afectiunilor pe care le trateaza o planta
-areSimptoma some (esteTratataDe value Menta)
+- pentru aflarea Simpomelor+Afectiuni pe care le trateaza (direct) o planta data
 
-- pentru aflarea Simpomelor pe care le trateaza o planta
-esteTratataDe value Menta
+DL_Query: { esteTratataDe value Menta }
+
+SPARQL {
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sedic: <http://www.semanticweb.org/sedic#>
+SELECT DISTINCT ?value
+WHERE {
+	{
+		sedic:Menta sedic:trateaza ?value .
+	}
+	UNION
+	{
+		?value sedic:esteTratataDe sedic:Menta
+	}
+}
+ORDER BY ?value
+}
 
 - pentru aflarea platelor ce trateaza o afectiune data
-trateaza some (esteSimptomaPentru value Hepatita_A)
+DL QUERY {  trateaza some (esteSimptomaPentru value Raceala) }
 
-- pentru aflarea plantei ce are denumirea populara "sir_caractere"
+SPARQL {
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sedic: <http://www.semanticweb.org/sedic#>
+
+SELECT DISTINCT ?value2
+WHERE {
+	{ sedic:Raceala sedic:areSimptoma ?value. }
+	UNION { ?value sedic:esteSimptomaPentru sedic:Raceala . }
+	{ SELECT DISTINCT *  WHERE { 
+		{ ?value2 sedic:trateaza ?value . }
+		 UNION { ?value sedic:esteTratataDe ?value2 . }
+		 }
+	}
+}
+
+}
+
+- pentru aflarea plantei ce are denumirea populara "sir_caractere" -- TODO research
 denumirePopulara value "sir_caractere"^^string 
+
+afene, afin de munte, afine -negre, afinghi, asine, coacă, cucuzie, pomişoare
+
+- afiseaza plantele ce trateaza afectiune si simptomele afeciunii
+DL Query { trateaza value Contuzii or trateaza some (esteSimptomaPentru value Contuzii) }
+
+SPARQL Query {
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sedic: <http://www.semanticweb.org/sedic#>
+
+SELECT DISTINCT  ?value2
+WHERE { 	{ sedic:Contuzii sedic:areSimptoma ?value . }
+	UNION { ?value sedic:esteSimptomaPentru sedic:Contuzii . }
+	UNION { ?value2 sedic:trateaza sedic:Contuzii . }
+	UNION { sedic:Contuzii sedic:esteTratataDe ?value2 .}
+	{ SELECT DISTINCT *  
+		WHERE { { ?value2 sedic:trateaza ?value . }
+		 	UNION { ?value sedic:esteTratataDe ?value2 . }
+			
+		 }
+	}
+}
+
+}
+
+- afiseaza doar simptomele care sunt tratate de planta data
+esteSimptomaPentru some (areSimptoma some (esteTratataDe value Aloe_vera))
+
+- afiseaza doar bolile care sunt tratate de planta data
+areSimptoma some (esteTratataDe value Aloe_vera)
+
+- pentru aflarea Simpomelor+Afectiuni pe care le trateaza (direct si deduse din ontologie) o planta data
+esteTratataDe value Menta or (esteSimptomaPentru some (esteTratataDe value Menta)) or (areSimptoma some (esteTratataDe value Menta))
+
+-- ???
+areSimptoma some (esteTratataDe value Aloe_vera) or esteTratataDe value Aloe_vera and not Simptoma
