@@ -6,7 +6,7 @@
             <?php $j = 0 ?>
             <?php foreach($data['se_trateaza'] as $se_trateaza): ?>
             <?php $j++ ?>
-                <?php echo $se_trateaza ?><?php if ($j !== $i): ?>, <?php endif; ?> 
+                <a href="<?php echo base_url("view/{$se_trateaza}/plants") ?>"><?php echo $se_trateaza ?></a><?php if ($j !== $i): ?>, <?php endif; ?> 
             <?php endforeach; ?>
         </span>
     </p>
@@ -18,7 +18,7 @@
                 <?php $j = 0 ?>
                 <?php foreach($data['are_simptome'] as $are_simptome): ?>
                     <?php $j++ ?>
-                    <?php echo $are_simptome ?><?php if ($j !== $i): ?>, <?php endif; ?> 
+                    <a href="<?php echo base_url("view/{$are_simptome}/disease") ?>"><?php echo $are_simptome ?></a><?php if ($j !== $i): ?>, <?php endif; ?>
                 <?php endforeach; ?>
             </span>
         <?php endif; ?>

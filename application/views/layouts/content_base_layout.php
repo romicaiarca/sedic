@@ -13,9 +13,9 @@
                 <?php $this->load->view('tabs/tabs_view', array('content' => $content)) ?>
             </div>
             <div id="content-search">
-                <?php $this->load->view('layouts/search') ?>
+                <?php $this->load->view('layouts/search', array('term' => !empty($term) ? $term : '')) ?>
             </div>
-            <div id="search-result"></div>
+            <div id="search-result"><?php echo !empty($search_result) ? $search_result : '' ?></div>
         </div>
     </div>
 </div>

@@ -45,6 +45,7 @@ $route['search'] = 'homepage/search';
 $route['get-details'] = 'homepage/get_details';
 $route['about'] = 'homepage/about';
 $route['contact'] = 'homepage/contact';
+$route['view/(:any)/(:any)'] = 'homepage/view_details/$1/$2';
 $route['404_override'] = '';
 
 

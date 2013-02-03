@@ -22,7 +22,7 @@ class Homepage extends MY_Controller {
     
     public function ax_plants()
     {
-        $result = array();
+//        $result = array();
         $query = ' SELECT DISTINCT ?plants WHERE { ?plants rdf:type sedic:Plante . }';
         $data = $this->_query($query, 'plants');
         $output = $this->load->view('tabs/list', array('list_type' => 'plants', 'items' => $data), true);
@@ -32,7 +32,6 @@ class Homepage extends MY_Controller {
     public function ax_disease()
     {
         $result = array();
-        
         $query = ' SELECT ?disease WHERE { { ?disease rdf:type sedic:Afectiune . } UNION { ?disease rdf:type sedic:Simptoma . } }';
         $data = $this->_query($query, 'disease');
         
@@ -73,16 +72,29 @@ class Homepage extends MY_Controller {
         
         $result = $this->db->query( $this->query . ' ' . $query );
         return ($field !== FALSE) ? prepare_result($result, $field) : $result;
-    } 
+    }
     
-    public function get_details()
+    public function view_details($term = '', $where_serch = '')
     {
-        $where_search = strtolower(trim($this->input->get('where_search', TRUE)));
-        $term = url_title(ucfirst(strtolower(trim($this->input->get('term', TRUE)))), "_");
+        $this->data['search_result'] = $this->get_details($term, $where_serch, TRUE);
+        $this->data['term'] = ucfirst(strtolower(trim(urldecode($term))));
+        $this->data['termen_cautat'] = $term;
+        $this->render('base_layout', 'layouts/content_base_layout');
+    }
+    
+    public function get_details($term = '', $where_search = '', $return_string = FALSE)
+    {
+        $term = url_title(ucfirst(strtolower(trim(urldecode($term)))), "_");
+        $where_search = strtolower(trim(urldecode($where_search)));
+        if(empty($where_search) || empty($term))
+        {
+            $where_search = strtolower(trim(urldecode($this->input->get('where_search', TRUE))));
+            $term = url_title(ucfirst(strtolower(trim(urldecode($this->input->get('term', TRUE))))), "_");
+        }
         if(empty($term))
         {
             $response = array('success' => FALSE, 'message' => 'No input recived!');
-            $this->load->view('layouts/error_message', Array());
+            $return = $this->load->view('layouts/error_message', $response, $return_string);
             exit;
         }
         if (in_array($where_search, array('plante', 'plants')))
@@ -96,16 +108,17 @@ class Homepage extends MY_Controller {
         if (!empty($data))
         {
             if (in_array($where_search, array('plante', 'plants')))
-                $this->load->view('layouts/plants_search_result', array('data' => $data));
+                $return = $this->load->view('layouts/plants_search_result', array('data' => $data), $return_string);
             else if (in_array($where_search, array('afectiuni', 'disease')))
-                $this->load->view('layouts/disease_search_result', array('data' => $data));
+                $return = $this->load->view('layouts/disease_search_result', array('data' => $data), $return_string);
             else
-                $this->load->view('layouts/error_message', Array());
+                $return = $this->load->view('layouts/error_message', Array('message' => 'Wrong input parameter!'), $return_string);
         }
         else
         {
-            $this->load->view('layouts/error_message', Array());
+            $return = $this->load->view('layouts/error_message', Array('message' => 'No results to show!'), $return_string);
         }
+        return $return;
     }
     
     private function _search_for_disease($term)
@@ -137,7 +150,7 @@ class Homepage extends MY_Controller {
                 }
             }
         }
-        $data['termen_cautat'] = trim($this->input->get('term', TRUE));
+        $data['termen_cautat'] = trim($term);
         if (!empty($data)) {
             $query_trateaza = 'SELECT DISTINCT ?afectiuni WHERE { { sedic:Menta sedic:trateaza ?afectiuni . } UNION { ?afectiuni sedic:esteTratataDe sedic:Menta } } ORDER BY ?afectiuni';
             $result_trateaza = $this->_query($query_trateaza);
