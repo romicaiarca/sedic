@@ -29,6 +29,11 @@ $(function() {
         }
     });
     
+    $("#search").keypress(function(evt) {
+        if (evt.keyCode=='13')
+            $this.closest('form').submit();
+    })
+    
     $( "#search" )
         .bind( "keydown", function( event ) {
             if ( event.keyCode === $.ui.keyCode.TAB && $( this ).data( "autocomplete" ).menu.active ) {
