@@ -46,6 +46,8 @@ $route['get-details'] = 'homepage/get_details';
 $route['about'] = 'homepage/about';
 $route['contact'] = 'homepage/contact';
 $route['view/(:any)/(:any)'] = 'homepage/view_details/$1/$2';
+$route['sparql-editor'] = 'homepage/sparql_editor';
+$route['validate'] = 'homepage/validate';
 $route['404_override'] = '';
 
 

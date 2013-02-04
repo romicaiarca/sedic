@@ -1,4 +1,18 @@
 $(function() {
+    $("#sparql-form").on("submit", function(event){
+            event.stopPropagation()
+            event.preventDefault()
+            $.post(
+                $(this).attr('action'),
+                $(this).serialize(),
+                function(response) {
+                    $('.result').html('').html(response)
+                },
+                'json'
+            )
+            return false;
+    })
+    
     $( "#tabs" ).tabs({
         beforeLoad: function( event, ui ) {
             ui.jqXHR.error(function() {
@@ -73,4 +87,13 @@ $(function() {
                 return false;
             }
     });
+    
+    var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+        mode: "application/x-sparql-query",
+        tabMode: "indent",
+        matchBrackets: true
+    });
+    editor.on('change', function(editor) {
+        $('#sparql').val(editor.getValue())
+    })
 });

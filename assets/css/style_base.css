@@ -37,3 +37,9 @@ form { display: inline-block; }
 .ui-autocomplete{font-size: 0.9em!important}
 .ui-autocomplete-category {font-weight: bold;font-size: 1.2em}
 #footer a, #footer a:visited, #footer:hover{color:white; text-decoration: underline; }
+.static-pages {width:70%; margin: 0 auto;text-align: justify;}
+#sparql {width:600px; height:200px; min-height: 200px; min-width: 600px; max-height: 200px; max-width: 600px; margin: 20px auto;}
+.CodeMirror {background-color: #FFF;width:100%;}
+#sparql-form{width:80%; margin: 20px auto; display: block;}
+.result{width:80%; margin: 20px auto; display: block;}
+.result > .error{color:black; padding: 0 0 10px 0;}

@@ -15,14 +15,41 @@ class Homepage extends MY_Controller {
         $this->endpoint = 'http://localhost:3030/ds/query';
     }
     
+    public function validate() {
+        $this->load->library('sparql_validator', array('endpoint' => $this->endpoint));
+        $query = $this->input->post('query', TRUE);
+        $error = $this->sparql_validator->validate($query);
+        if(!empty($error))
+        {
+            echo json_encode($this->load->view('partial/error_message', array('message' => '<pre><strong>' . htmlentities($error) . '</strong></pre>'), TRUE));
+            exit;
+        }
+        else
+        {
+            
+        }
+        return TRUE;
+    }
+    
     public function index()
     {
-        $this->render('base_layout', 'layouts/content_base_layout');
+        $this->render('base_layout', 'pages/index');
+    }
+    
+    public function sparql_editor()
+    {
+        if ($this->input->post())
+        {
+            
+        }
+        else
+        {
+            $this->render('base_layout', 'pages/sparql');
+        }
     }
     
     public function ax_plants()
     {
-//        $result = array();
         $query = ' SELECT DISTINCT ?plants WHERE { ?plants rdf:type sedic:Plante . }';
         $data = $this->_query($query, 'plants');
         $output = $this->load->view('tabs/list', array('list_type' => 'plants', 'items' => $data), true);
@@ -79,7 +106,7 @@ class Homepage extends MY_Controller {
         $this->data['search_result'] = $this->get_details($term, $where_serch, TRUE);
         $this->data['term'] = ucfirst(strtolower(trim(urldecode($term))));
         $this->data['termen_cautat'] = $term;
-        $this->render('base_layout', 'layouts/content_base_layout');
+        $this->render('base_layout', 'pages/index');
     }
     
     public function get_details($term = '', $where_search = '', $return_string = FALSE)
@@ -94,7 +121,7 @@ class Homepage extends MY_Controller {
         if(empty($term))
         {
             $response = array('success' => FALSE, 'message' => 'No input recived!');
-            $return = $this->load->view('layouts/error_message', $response, $return_string);
+            $return = $this->load->view('partial/error_message', $response, $return_string);
             exit;
         }
         if (in_array($where_search, array('plante', 'plants')))
@@ -108,15 +135,15 @@ class Homepage extends MY_Controller {
         if (!empty($data))
         {
             if (in_array($where_search, array('plante', 'plants')))
-                $return = $this->load->view('layouts/plants_search_result', array('data' => $data), $return_string);
+                $return = $this->load->view('partial/plants_search_result', array('data' => $data), $return_string);
             else if (in_array($where_search, array('afectiuni', 'disease')))
-                $return = $this->load->view('layouts/disease_search_result', array('data' => $data), $return_string);
+                $return = $this->load->view('partial/disease_search_result', array('data' => $data), $return_string);
             else
-                $return = $this->load->view('layouts/error_message', Array('message' => 'Wrong input parameter!'), $return_string);
+                $return = $this->load->view('partial/error_message', Array('message' => 'Wrong input parameter!'), $return_string);
         }
         else
         {
-            $return = $this->load->view('layouts/error_message', Array('message' => 'No results to show!'), $return_string);
+            $return = $this->load->view('partial/error_message', Array('message' => 'No results to show!'), $return_string);
         }
         return $return;
     }
@@ -161,12 +188,10 @@ class Homepage extends MY_Controller {
     
     public function about()
     {
-        $data['content'] = $this->load->view('layouts/about', TRUE, TRUE);
-        $this->load->view('layouts/template_static_pages', $data);
+        $this->render('base_layout', 'pages/about');
     }
     public function contact() {
-        $data['content'] = $this->load->view('layouts/contact', TRUE, TRUE);
-        $this->load->view('layouts/template_static_pages', $data);
+        $this->render('base_layout', 'pages/contact');
     }
 }
 
