@@ -25,11 +25,12 @@ a, a:hover, a:visited {text-decoration:none;}
 .ui-autocomplete-loading { background: white url('libs/jquery-ui/images/ui-anim_basic_16x16.gif') right center no-repeat; }
 
 .ui-autocomplete-category { font-weight: bold; padding: .2em .4em; margin: .8em 0 .2em; line-height: 1.5; }
-#search-result { display: inline-block; margin-left: 25px; width:560px; }
+#search-result { display: inline-block; margin-left: 25px; width:50%; }
 #search-result-content { display: inline-block; text-align: justify; }
 #search-result-content img { display: block; text-align: center; margin: 0 auto 15px; width:300px; height: auto;}
 #search-result-content label { font-size: 1em; font-weight: bold; }
 form { display: inline-block; }
+#search {width: 50%}
 #search-result p.inline { display: inline; }
 .ui-tabs-panel{overflow-y: scroll;height: 400px;}
 #footer {width:70%; margin:10px auto;text-align: center;color:white;}
@@ -43,3 +44,7 @@ form { display: inline-block; }
 #sparql-form{width:80%; margin: 20px auto; display: block;}
 .result{width:80%; margin: 20px auto; display: block;}
 .result > .error{color:black; padding: 0 0 10px 0;}
+@media only screen and (max-width:999px){
+    #tabs {display: none}
+    #search-result {width: 90%}
+}
