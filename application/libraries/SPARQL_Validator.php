@@ -16,17 +16,17 @@ class SPARQL_Validator {
         }
     }
     
-    public function validate($query) {
-        return $this->send_to_validator($query);
+    public function validate($query, $output_format = 'sparql') {
+        return $this->send_to_validator($query, $output_format);
     }
     
-    public function send_to_validator($query)
+    public function send_to_validator($query, $output_format = 'sparql')
     {
         $fields_string = '';
         //set POST variables
         $fields = array(
                     'languageSyntax' => urlencode('SPARQL'),
-                    'outputFormat' => urlencode('sparql'),
+                    'output' => urlencode($output_format),
                     'query' => urlencode($query),
                 );
 
@@ -35,16 +35,16 @@ class SPARQL_Validator {
         {
             $fields_string .= $key.'='.$value.'&';
         }
-        rtrim($fields_string, '&');
-
+        $fields_string = rtrim($fields_string, '&');
+        
         //open connection
         $ch = curl_init();
 
         //set the url, number of POST vars, POST data
-        curl_setopt($ch, CURLOPT_URL, $this->endpoint);
-        curl_setopt($ch, CURLOPT_POST, count($fields));
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_URL, $this->endpoint . '?' . $fields_string);
+        curl_setopt($ch, CURLOPT_POST, FALSE); //count($fields));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, NULL); //$fields_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         
         //execute post
         $response = curl_exec($ch);

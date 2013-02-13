@@ -15,20 +15,22 @@ class Homepage extends MY_Controller {
         $this->endpoint = 'http://localhost:3030/ds/query';
     }
     
-    public function validate() {
+    public function validate()
+    {
         $this->load->library('sparql_validator', array('endpoint' => $this->endpoint));
+        
         $query = $this->input->post('query', TRUE);
-        $error = $this->sparql_validator->validate($query);
-        if(!empty($error))
+        $output_format = $this->input->post('output', TRUE);
+        
+        if ( $output_format == FALSE )
         {
-            echo json_encode($this->load->view('partial/error_message', array('message' => '<pre><strong>' . htmlentities($error) . '</strong></pre>'), TRUE));
-            exit;
+            $output_format = 'sparql';
         }
-        else
-        {
-            
-        }
-        return TRUE;
+        
+        $error = $this->sparql_validator->validate($query, $output_format);
+        
+        echo json_encode($this->load->view('partial/error_message', array('message' => '<pre><strong>' . htmlentities($error) . '</strong></pre>'), TRUE));
+        exit;
     }
     
     public function index()
@@ -91,7 +93,6 @@ class Homepage extends MY_Controller {
         if( !$this->db )
         {
             $error = $this->db->errno() . ": " . $this->db->error();
-            log_message('error', print_r($error, 1));
             $this->load->view('layouts/error_message', Array('message' => 'Database connaction problem!'));
             exit;
         }
@@ -152,7 +153,6 @@ class Homepage extends MY_Controller {
     {
         $query = "SELECT DISTINCT ?disease WHERE { { ?disease sedic:trateaza sedic:{$term} . } UNION { sedic:{$term}  sedic:esteTratataDe ?disease . } UNION { sedic:{$term} sedic:areSimptoma ?value . } UNION { ?value sedic:esteSimptomaPentru sedic:{$term} . }  { SELECT *  WHERE { { ?disease sedic:trateaza ?value . } UNION { ?value sedic:esteTratataDe ?disease . } } } } ";
         $results = $this->_query($this->query . $query);
-        log_message('error', print_r($results, 1));
         $data = array();
         $data['se_trateaza'] = prepare_result($results, 'disease');
         //get simptoms

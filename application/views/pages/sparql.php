@@ -13,6 +13,13 @@
         </textarea>
         <div class="buttons">
             <input type="submit" name="send" value="Send Query" id="send-sparql" >
+            <select name="output">
+                <option value="json">JSON</option>
+                <option value="xml">XML</option>
+                <option value="text">Text</option>
+                <option value="csv">CSV</option>
+                <option value="tsv">TSV</option>
+            </select>
         </div>
     </form>
     <code><div class="result"></div></code>
