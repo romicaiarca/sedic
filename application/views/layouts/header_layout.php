@@ -18,6 +18,6 @@
     <div id="body" class="">
         <div id="wraper" class="">
             <a href="<?php echo base_url() ?>">
-                <div id="header"> Plante Medicinale si afectiuni tratate - sedic </div>
+                <div id="header"> <p>Plante Medicinale si afectiuni tratate - sedic</p> </div>
             </a>
             <?php $this->load->view('layouts/top_nav_layout') ?>
